@@ -180,7 +180,7 @@ export function Dashboard() {
                   variant={action.variant as "default" | "outline"}
                   className={`h-20 flex-col space-y-2 transition-all duration-200 hover:shadow-md transform ${
                     action.variant === "default"
-                      ? "hover:bg-primary/20 hover:text-primary"
+                      ? "hover:bg-yellow-500 hover:text-primary"
                       : "hover:bg-primary/20 hover:text-primary"
                   }`}
                   style={{ animationDelay: `${500 + index * 100}ms` }}
