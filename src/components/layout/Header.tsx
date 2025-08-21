@@ -91,9 +91,9 @@ export function Header() {
               isScrolled ? "text-gray-600" : "text-gray-500"
             }`}
           >
-            <Bell className="w-5 h-5 transition-transform duration-200 hover:scale-110" />
-            <Badge className="absolute w-5 h-5 p-0 text-xs rounded-full -top-1 -right-1 animate-pulse">
-              3
+            <Bell className="w-6 h-6 transition-transform duration-200 hover:scale-110" />
+            <Badge className="absolute flex items-center justify-center w-5 h-5 p-0 text-xs rounded-full -top-1 -right-0.5 animate-pulse">
+              9+
             </Badge>
           </Button>
 
