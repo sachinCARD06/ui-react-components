@@ -21,7 +21,7 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       # 🔑 Login to container registry
       - name: Log in to Docker Hub
