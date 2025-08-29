@@ -20,7 +20,7 @@ import {
 
 export function Dashboard() {
   return (
-    <div className="space-y-6 duration-700 animate-in slide-in-from-bottom-4">
+    <div className="p-4 space-y-6 duration-700 animate-in slide-in-from-bottom-4 lg:p-6">
       {/* Page Header */}
       <div className="duration-500 delay-100 animate-in slide-in-from-bottom-2">
         <h1 className="text-3xl font-bold text-gray-900 transition-all duration-200 hover:text-blue-600">

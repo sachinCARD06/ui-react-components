@@ -74,7 +74,7 @@ const componentExamples = [
 
 export function Components() {
   return (
-    <div className="space-y-6">
+    <div className="p-4 space-y-6 lg:p-6">
       {/* Page Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Components</h1>

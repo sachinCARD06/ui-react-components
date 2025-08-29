@@ -66,7 +66,7 @@ export function Header() {
         {/* Navigation */}
         <nav className="items-center hidden space-x-6 lg:flex">
           {[
-            { name: "Components", href: "#" },
+            { name: "Components", href: "/ui-components" },
             { name: "Documentation", href: "#" },
             { name: "Examples", href: "#" },
           ].map((item) => (

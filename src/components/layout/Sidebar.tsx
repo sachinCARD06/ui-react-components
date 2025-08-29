@@ -1,45 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import {
-  Home,
-  Package,
-  FileText,
-  Settings,
-  Users,
-  BarChart3,
-  Layers,
-  Palette,
-  Code,
-  Zap,
-  X,
-  Menu,
-} from "lucide-react";
+import { X, Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
-
-const navigation = [
-  { name: "Dashboard", href: "/", icon: Home },
-  { name: "Components", href: "/app-components", icon: Package },
-  { name: "Documentation", href: "/docs", icon: FileText },
-  { name: "Examples", href: "/examples", icon: Code },
-  { name: "Analytics", href: "/analytics", icon: BarChart3 },
-  { name: "Team", href: "/team", icon: Users },
-  { name: "Settings", href: "/settings", icon: Settings },
-];
-
-const componentCategories = [
-  { name: "Layout", icon: Layers, count: 8 },
-  { name: "Forms", icon: Palette, count: 12 },
-  { name: "Data Display", icon: BarChart3, count: 6 },
-  { name: "Feedback", icon: Zap, count: 4 },
-];
+import { componentCategories, mainRoutes } from "@/routes/mainRoutes";
 
 export function Sidebar() {
   const location = useLocation();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+  const isParentActivePath = location.pathname.split("/")[1] || "";
 
   // Keyboard shortcut for toggling sidebar (Ctrl/Cmd + B)
   useEffect(() => {
@@ -115,15 +88,17 @@ export function Sidebar() {
         {/* Main Navigation */}
         <div className="flex-1 py-4 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
           <nav className="px-3 space-y-1">
-            {navigation.map((item, index) => {
-              const isActive = location.pathname === item.href;
+            {mainRoutes.map((item, index) => {
+              const isActive =
+                isParentActivePath === item.href.split("/")[1] ||
+                location.pathname === item.href;
               return (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 transform hover:scale-105 relative ${
                     isActive
-                      ? "bg-blue-100 text-blue-700 shadow-sm"
+                      ? "bg-primary/10 text-primary shadow-sm"
                       : "text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:translate-x-1"
                   } ${!shouldShowExpanded ? "justify-center" : ""}`}
                   style={{ animationDelay: `${index * 50}ms` }}
@@ -135,7 +110,7 @@ export function Sidebar() {
                       shouldShowExpanded ? "mr-3 h-5 w-5" : "mx-auto h-5 w-5"
                     } ${
                       isActive
-                        ? "text-blue-700 scale-110"
+                        ? "text-primary scale-110"
                         : "text-gray-400 group-hover:text-gray-500 group-hover:scale-110"
                     }`}
                   />

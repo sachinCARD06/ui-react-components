@@ -1,19 +1,16 @@
+import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 import { Footer } from "./Footer";
-import { Outlet } from "react-router-dom";
 
 export function Layout() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen overflow-y-scroll bg-gray-50 scrollbar-hide">
       <Header />
       <Sidebar />
-      <div
-        className="pt-16 transition-all duration-300"
-        style={{ paddingLeft: "64px" }}
-      >
-        <main className="min-h-[calc(100vh-4rem)] bg-white main-content">
-          <div className="p-4 duration-500 lg:p-6 animate-in slide-in-from-bottom-2">
+      <div className="pt-16 pl-16 transition-all duration-300">
+        <main className="min-h-[calc(100vh-4rem)] bg-white">
+          <div className="duration-500 animate-in slide-in-from-bottom-2">
             <Outlet />
           </div>
         </main>
