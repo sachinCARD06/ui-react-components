@@ -80,7 +80,7 @@ const FolderFileExplorer = () => {
     const newId = Math.random().toString(36).substr(2, 9);
     const newNode: FileNode = {
       id: newId,
-      name: "",
+      name: `New ${type}`,
       type,
       ...(type === "folder" ? { children: [] } : {}),
     };

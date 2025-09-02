@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import SvgPage from "./pages/SvgPage";
 import AnimatedBeam from "./pages/AnimatedBeam";
 import FrontendRoadmap from "./pages/FrontendRoadmap";
+import IpAddresses from "./pages/IpAddresses";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="features" element={<Features />}>
             <Route path="joyride" element={<JoyridePage />} />
             <Route path="explorer" element={<FolderFileExplorer />} />
+            <Route path="ip-addresses" element={<IpAddresses />} />
           </Route>
           <Route path="svgs" element={<SvgPage />}>
             <Route path="animated-beam" element={<AnimatedBeam />} />
