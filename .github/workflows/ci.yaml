@@ -76,4 +76,4 @@ jobs:
           aws-region: ap-south-1
 
       - name: Sync to S3
-        run: aws s3 sync ./build s3://sachinrk123 --delete
+        run: aws s3 sync ./dist s3://sachinrk123 --delete
