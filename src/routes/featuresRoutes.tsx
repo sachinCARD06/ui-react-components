@@ -2,10 +2,22 @@ import { Folder, Globe, WaypointsIcon } from "lucide-react";
 
 export const featureRoutes = [
   {
-    name: "Explorer",
-    href: "/features/explorer",
+    name: "Explorer II",
+    href: "/features/explorer-two",
     icon: Folder,
     description: "Explorer features",
+  },
+  {
+    name: "Explorer I",
+    href: "/features/explorer-one",
+    icon: Folder,
+    description: "Explorer features",
+  },
+  {
+    name: "MC Quiz App",
+    href: "/features/mc-quiz-app",
+    icon: Folder,
+    description: "MC Quiz App features",
   },
   {
     name: "IpAddresses",

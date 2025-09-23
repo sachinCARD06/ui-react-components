@@ -23,7 +23,7 @@ interface FileNode {
   children?: FileNode[];
 }
 
-const FolderFileExplorer = () => {
+const FolderFileExplorerTwo = () => {
   const [structure, setStructure] = useState<{
     appName: string;
     children: FileNode[];
@@ -289,4 +289,4 @@ const FolderFileExplorer = () => {
   );
 };
 
-export default FolderFileExplorer;
+export default FolderFileExplorerTwo;

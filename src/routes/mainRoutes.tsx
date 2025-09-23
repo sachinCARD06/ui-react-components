@@ -16,7 +16,7 @@ import {
 export const mainRoutes = [
   { name: "Dashboard", href: "/", icon: Home },
   { name: "Components", href: "/ui-components", icon: Package },
-  { name: "Features", href: "/features/explorer", icon: Component },
+  { name: "Features", href: "/features/explorer-two", icon: Component },
   { name: "Svgs", href: "/svgs/animated-beam", icon: Image },
   { name: "Documentation", href: "/docs", icon: FileText },
   { name: "Examples", href: "/examples", icon: Code },
