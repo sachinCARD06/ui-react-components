@@ -196,7 +196,7 @@ const JoyridePage = () => {
           </Card>
 
           {/* Quick Actions */}
-          <Card className="transition-all duration-300 duration-500 delay-300 hover:shadow-lg animate-in slide-in-from-right-2">
+          <Card className="transition-all duration-300 delay-300 hover:shadow-lg animate-in slide-in-from-right-2">
             <CardHeader>
               <CardTitle className="transition-colors duration-200">
                 Quick Actions
